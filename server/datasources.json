@@ -1,0 +1,45 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mongoDs": {
+    "host": "localhost",
+    "port": 27017,
+    "database": "rhemasg",
+    "name": "mongoDs",
+    "connector": "mongodb"
+  },
+  "gmail": {
+    "name": "gmail",
+    "connector": "mail",
+    "transports": [
+      {
+        "type": "smtp",
+        "host": "smtp.gmail.com",
+        "secure": true,
+        "port": 465,
+        "tls": {
+          "rejectUnauthorized": false
+        },
+        "auth": {
+          "user": "hesedist@gmail.com",
+          "pass": "password"
+        }
+      }
+    ]
+  },
+  "s3": {
+    "name": "s3",
+    "connector": "loopback-component-storage",
+    "provider": "amazon",
+    "key": "AKIAICOZMHJPHQEDDYAA",
+    "keyId": "/IKgojzryZlGEkcgiCkZP6E31OGN9+iupM6OIuXV"
+  },
+  "local": {
+    "name": "local",
+    "connector": "loopback-component-storage",
+    "provider": "filesystem",
+    "root": "./server/storage"
+  }
+}

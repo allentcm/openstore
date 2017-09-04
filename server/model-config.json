@@ -1,0 +1,81 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "db"
+  },
+  "AccessToken": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "db",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "db",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "db",
+    "public": false
+  },
+  "Note": {
+    "dataSource": "db"
+  },
+  "Review": {
+    "dataSource": "mongoDs",
+    "public": true
+  },
+  "Reviewer": {
+    "dataSource": "mongoDs",
+    "public": true
+  },
+  "CoffeeShop": {
+    "dataSource": "mongoDs",
+    "public": true
+  },
+  "Member": {
+    "dataSource": "mongoDs",
+    "public": true
+  },
+  "Product": {
+    "dataSource": "mongoDs",
+    "public": true
+  },
+  "Category": {
+    "dataSource": "mongoDs",
+    "public": true
+  },
+  "Type": {
+    "dataSource": "mongoDs",
+    "public": true
+  },
+  "AppRole": {
+    "dataSource": "mongoDs",
+    "public": true
+  },
+  "AppFile": {
+    "dataSource": "mongoDs",
+    "public": true
+  },
+  "container": {
+    "dataSource": "local",
+    "public": true
+  }
+}
